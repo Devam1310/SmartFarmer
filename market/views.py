@@ -6,7 +6,23 @@ import pprint
 # Create your views here.
 def mandiprice(request):
     data=current_price.objects.all()
-    return render(request,'mandiprice.html',{'data':data})
+    state_set=set()
+    district_set=set()
+    market_set=set()
+    commodity_set=set()
+    variety_set=set()
+    arrival_date_set=set()
+    print("ppp")
+    for i in data:
+        state_set.add(i.state)
+        district_set.add(i.district)
+        market_set.add(i.market)
+        commodity_set.add(i.commodity)
+        variety_set.add(i.variety)
+        date=str(i.arrival_date.day)+"-"+str(i.arrival_date.month)+"-"+str(i.arrival_date.year)
+        arrival_date_set.add(date)
+    print(arrival_date_set)
+    return render(request,'mandiprice.html',{'data':data,'state_set':state_set,'district_set':district_set,'market_set':market_set,'commodity_set':commodity_set,'variety_set':variety_set,'arrival_date_set':arrival_date_set})
 
 def login(request):
     return render(request, 'login.html')
