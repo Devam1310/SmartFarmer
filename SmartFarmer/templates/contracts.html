@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Smart Farmers</title>
+
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
+      rel="stylesheet"
+    />
+    <!-- Nucleo Icons -->
+    <link href="{% static './assets/css/nucleo-icons.css' %}" rel="stylesheet" />
+    <link href="{% static './assets/css/nucleo-svg.css' %}" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <link href="{% static './assets/css/font-awesome.css' %}" rel="stylesheet" />
+    <link href="{% static './assets/css/nucleo-svg.css' %}" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link href="{% static './assets/css/argon-design-system.css' %}" rel="stylesheet" />
+    <link href="{% static './assets/css/style_contract.css' %}" rel="stylesheet" />
+  </head>
+<body class="index-page">
+<nav
+      id="navbar-main"
+      class="navbar navbar-main navbar-expand-lg bg-white navbar-light position-sticky top-0 shadow py-2"
+    >
+    <div class="container">
+      <img height="50px" width="50px" src="{% static './assets/img/brand/logo.png' %}" />
+        <a class="navbar-brand mr-lg-5" href="/">
+          <h1 class="display-3">SmartFarmer</h1>
+        </a>
+      <a class="navbar-brand" href="./contracts.html">Contracts</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar-success"
+          aria-controls="navbar-success"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="navbar-nav ml-lg-auto">
+          <li class="nav-item">
+            <form action="SearchMessage" method="post" enctype="multipart/form-data"></form>
+              <div class="row">
+                  <div class="form-group">
+                    <label class="navbar-brand">Enter Company or Commodity name</label>
+                    <div class="input-group mb-4">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="ni ni-zoom-split-in"> </i></span>
+                      </div>
+                      <input class="form-control" name="SearchMessage" placeholder="Search" type="text">
+                    </div>
+                  </div>
+              </div>
+            </form>
+          </li>
+          <li class="nav-item dropdown">
+            <!-- Example single danger button -->
+          </li>
+          <li class="nav-item">
+            <a class="navbar-brand" href="addcontract">Add Contract</a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbar-success"
+                aria-controls="navbar-success"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+              <span class="navbar-toggler-icon"></span>
+              </button>
+          </li>
+        </ul>
+    </div>
+    </nav>
+    <div class="wrapper">
+      <div class="section section-hero section-shaped">
+        <div class="shape shape-style-1 shape-primary">
+          <span class="span-150"></span>
+          <span class="span-50"></span>
+          <span class="span-50"></span>
+          <span class="span-75"></span>
+          <span class="span-100"></span>
+          <span class="span-75"></span>
+          <span class="span-50"></span>
+          <span class="span-100"></span>
+          <span class="span-50"></span>
+          <span class="span-100"></span>
+        </div>
+            <main class="container_contract">
+              <div class="contracts">
+                
+                <article class="contract">
+                  <img class="contract__img" src="" />
+                  <div class="contract__data">
+                    <h3 class="contract__name">Company Name</h3>
+                    <p class="country__row"><span></span>Email</p>
+                    <p class="country__row"><span></span>Contact No.</p>
+                    <p class="country__row"><span></span>Quantity</p>
+                    <h4 class="country__region">Commodity Name</h4>
+                    <p class="country__row"><span></span>Quantity</p>
+                    <p class="country__row"><span></span>Price</p>
+                    <p class="country__row"><span></span>Deadline</p >
+                  </div>
+                </article>
+
+                <article class="contract">
+                  <img class="contract__img" src="" />
+                  <div class="contract__data">
+                    <h3 class="contract__name">Company Name</h3>
+                    <p class="country__row"><span></span>Email</p>
+                    <p class="country__row"><span></span>Contact No.</p>
+                    <p class="country__row"><span></span>Quantity</p>
+                    <h4 class="country__region">Commodity Name</h4>
+                    <p class="country__row"><span></span>Quantity</p>
+                    <p class="country__row"><span></span>Price</p>
+                    <p class="country__row"><span></span>Deadline</p >
+                  </div>
+                </article>
+
+              </div>
+              <div class="contracts">
+              <article class="contract">
+                <img class="contract__img" src="" />
+                <div class="contract__data">
+                  <h3 class="contract__name">Company Name</h3>
+                  <p class="country__row"><span></span>Email</p>
+                  <p class="country__row"><span></span>Contact No.</p>
+                  <p class="country__row"><span></span>Quantity</p>
+                  <h4 class="country__region">Commodity Name</h4>
+                  <p class="country__row"><span></span>Quantity</p>
+                  <p class="country__row"><span></span>Price</p>
+                  <p class="country__row"><span></span>Deadline</p >
+                </div>
+              </article>
+
+              <article class="contract">
+                <img class="contract__img" src="" />
+                <div class="contract__data">
+                  <h3 class="contract__name">Company Name</h3>
+                  <p class="country__row"><span></span>Email</p>
+                  <p class="country__row"><span></span>Contact No.</p>
+                  <p class="country__row"><span></span>Quantity</p>
+                  <h4 class="country__region">Commodity Name</h4>
+                  <p class="country__row"><span></span>Quantity</p>
+                  <p class="country__row"><span></span>Price</p>
+                  <p class="country__row"><span></span>Deadline</p >
+                </div>
+              </article>
+              </div>
+              <!-- <button class="btn-country">Where am I?</button> -->
+              <div class="images"></div>
+            </main>
+            </div>
+            </div>
+      <!-- Core -->
+      <script src="{% static '/assets/vendor/jquery/jquery.min.js' %}"></script>
+      <script src="{% static '/assets/vendor/popper/popper.min.js' %}"></script>
+      <script src="{% static '/assets/vendor/bootstrap/bootstrap.min.js' %}"></script>
+
+      <!-- Optional plugins -->
+      <script src="{% static '/assets/vendor/PLUGIN_FOLDER/PLUGIN_SCRIPT.js' %}"></script>
+
+      <!-- Argon JS -->
+      <script src="{% static '/assets/js/argon-design-system.js' %}"></script>
+</body>
+</html>

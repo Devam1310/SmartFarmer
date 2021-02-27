@@ -84,100 +84,120 @@
           <span class="span-50"></span>
           <span class="span-100"></span>
         </div>
-        <form action="/market/mandiprice" method="post" enctype="multipart/form-data">
-        {% csrf_token %}
+        <form
+          action="/market/mandiprice"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          {% csrf_token %}
+          <!--<input name="state_set" hidden list="state_set" value="{{ state_set }}">
+        <input name="district_set" hidden list="district_set" value="{{ district_set }}">
+        <input name="market_set" hidden list="market_set" value="{{ market_set }}">
+        <input name="commodity_set" hidden list="commodity_set" value="{{ commodity_set }}">
+        <input name="variety_set" hidden list="variety_set" value="{{ variety_set }}">
+        <input name="arrival_date_set" hidden list="arrival_date_set" value="{{ arrival_date_set }}">-->
           <div class="container">
             <div class="row">
-             <div class="col-sm">
-              <div class="form-group">
-                <label for="StateName">Select State</label>
-                <select  class="form-control" name="StateName">
-                   <option value=""></option>
-                  {% for i in state_set %}
-                  <option value={{ i }}>{{ i }}</option>
-                  {% endfor %}
-                </select>
-              </div>
-             </div>
-            <div class="col-sm">
-            <div class="form-group">
-                <label for="DistrictName">Select District</label>
-                <select class="form-control" name="DistrictName">
-                 <option value=""></option>
-                  {% for i in district_set %}
-                  <option value={{ i }}>{{ i }}</option>
-                  {% endfor %}
-                </select>
-            </div>
-            </div>
-            <div class="col-sm">
-            <div class="form-group">
-                <label for="MarketName">Select Market</label>
-                <select class="form-control" name="MarketName">
-                <option value=""></option>
-                  {% for i in market_set %}
-                  <option value={{ i }}>{{ i }}</option>
-                  {% endfor %}
-                </select>
-            </div>
-            </div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-             <div class="col-sm">
-              <div class="form-group">
-                <label for="CommodityName">Select Commodity</label>
-                <select class="form-control" name="CommodityName">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="StateName">Select State</label>
+                  <select class="form-control" name="StateName">
                     <option value=""></option>
-                  {% for i in commodity_set %}
-                  <option value={{ i }}>{{ i }}</option>
-                  {% endfor %}
-                </select>
+                    {% for i in state_set %}
+                    <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
               </div>
-             </div>
-            <div class="col-sm">
-            <div class="form-group">
-                <label for="VarietyName">Select Variety</label>
-                <select class="form-control" name="VarietyName">
-                   <option value=""></option>
-                  {% for i in variety_set %}
-                  <option value={{ i }}>{{ i }}</option>
-                  {% endfor %}
-                </select>
-            </div>
-            </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="DistrictName">Select District</label>
+                  <select class="form-control" name="DistrictName">
+                    <option value=""></option>
+                    {% for i in district_set %}
+                    <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="MarketName">Select Market</label>
+                  <select class="form-control" name="MarketName">
+                    <option value=""></option>
+                    {% for i in market_set %}
+                    <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
             </div>
           </div>
           <div class="container">
             <div class="row">
-             <div class="col-sm">
-              <div class="form-group">
-                <label for="ArrivalDate">Select Arrival Date</label>
-                <select class="form-control" name="ArrivalDate">
-                  <option value=""></option>
-                  {% for i in arrival_date_set %}
-                  <option value={{ i }}>{{ i }}</option>
-                  {% endfor %}
-                </select>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="CommodityName">Select Commodity</label>
+                  <select class="form-control" name="CommodityName">
+                    <option value=""></option>
+                    {% for i in commodity_set %}
+                    <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
               </div>
-             </div>
-            <div class="col-sm">
-            <div class="form-group">
-                <label for="MinPrice">Select Minimum Price</label>
-
-                  <input name='MinPrice' class="form-control" type="number" min="0" placeholder="0"/>
-
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="VarietyName">Select Variety</label>
+                  <select class="form-control" name="VarietyName">
+                    <option value=""></option>
+                    {% for i in variety_set %}
+                    <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
             </div>
-            </div>
-            <div class="col-sm">
-            <div class="form-group">
-                <label for="MaxPrice">Select Maximum Price</label>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="ArrivalDate">Select Arrival Date</label>
+                  <select class="form-control" name="ArrivalDate">
+                    <option value=""></option>
+                    {% for i in arrival_date_set %}
+                    <option value="{{ i }}">{{ i }}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="MinPrice">Select Minimum Price</label>
 
-                  <input name='MaxPrice' class="form-control" type="number" min="0" placeholder="0"/>
+                  <input
+                    name="MinPrice"
+                    class="form-control"
+                    type="number"
+                    min="0"
+                    placeholder="0"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="MaxPrice">Select Maximum Price</label>
 
-            </div>
-            </div>
+                  <input
+                    name="MaxPrice"
+                    class="form-control"
+                    type="number"
+                    min="0"
+                    placeholder="0"
+                  />
+                </div>
+              </div>
             </div>
           </div>
           <div style="text-align: center; margin: 10px">
