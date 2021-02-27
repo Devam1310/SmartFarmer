@@ -8,7 +8,7 @@ class current_price(models.Model):
     market = models.CharField(max_length=50)
     commodity = models.CharField(max_length=100)
     variety = models.CharField(max_length=50)
-    arrival_data = models.DateField()
+    arrival_date = models.DateField()
     min_price = models.FloatField()
     max_price = models.FloatField()
     model_price = models.FloatField()
