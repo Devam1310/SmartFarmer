@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'aifarm.apps.AifarmConfig',
+    'market.apps.MarketConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,8 +78,12 @@ WSGI_APPLICATION = 'SmartFarmer.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd5nggs5aenph6u',
+        'USER': 'boalawxgwexlfj',
+        'PASSWORD': '3ce058d0af40cf082c0751201a1d82425ae217810699de4a898423429c055a67',
+        'HOST': 'ec2-54-242-43-231.compute-1.amazonaws.com',
+        'PORT': 5432,
     }
 }
 
