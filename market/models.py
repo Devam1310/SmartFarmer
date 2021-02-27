@@ -16,6 +16,7 @@ class current_price(models.Model):
 class company(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField()
+    password=models.CharField(max_length=30)
     contact = models.BigIntegerField()
     address = models.CharField(max_length=150)
     certificate = models.ImageField()

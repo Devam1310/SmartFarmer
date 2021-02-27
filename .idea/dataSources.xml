@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="Smart Farmer" uuid="82aa6fbf-4bef-4647-8046-a3406365dcd1">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>mailto:3ce058d0af40cf082c0751201a1d82425ae217810699de4a898423429c055a67@ec2-54-242-43-231.compute-1.amazonaws.com:5432/d5nggs5aenph6u</jdbc-url>
+    </data-source>
+  </component>
+</project>
