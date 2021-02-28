@@ -49,7 +49,7 @@
       type="image/png"
       href="{% static './assets/img/favicon.png' %}"
     />
-    <title>Argon Design System by Creative Tim</title>
+    <title>Sign Up</title>
     <!--     Fonts and icons     -->
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
@@ -76,6 +76,9 @@
       href="{% static './assets/css/argon-design-system.css' %}"
       rel="stylesheet"
     />
+
+    
+
   </head>
   <body>
     <nav
@@ -242,7 +245,24 @@
                     Sign Up to <strong>SmartFarmer</strong>
                   </h3>
                 </div>
-                <form action="signup" method="post">
+
+
+                <script>
+                  function validateForm(form) {
+                    var pass1 = form.pass.value;
+                    var pass2 = form.pass1.value;
+                    var pp = form.cNumber.value;
+                   
+                    if (pass1 != pass2) {
+                      alert("Passwords Does Not Match");
+                      return false;
+                    }
+                  
+
+                    
+                  }
+                </script>
+                <form name="myForm" onsubmit="return validateForm(this)" action="signup" method="post">
                   {% csrf_token %}
                   <div class="form-group first">
                     <label for="cname">Company Name</label>
@@ -252,26 +272,31 @@
                       placeholder="Firm Name"
                       id="cname"
                       name="companyName"
+                      required
                     />
                   </div>
                   <div class="form-group">
                     <label for="email">E-mail</label>
                     <input
-                      type="text"
+                      type="email"
                       class="form-control"
                       placeholder="your-email@mail.com"
                       id="email"
                       name="Email"
+                      required
                     />
                   </div>
                   <div class="form-group">
                     <label for="contact">Contact No.</label>
                     <input
-                      type="text"
+                      type="tel"
                       class="form-control"
                       placeholder="Contact Number"
                       id="contact"
                       name="cNumber"
+                      maxlength="10"
+                      minlength="10"
+                      required
                     />
                   </div>
                   <div class="form-group">
@@ -282,6 +307,7 @@
                       placeholder="House Number and Locality"
                       id="address1"
                       name="add1"
+                      required
                     />
                   </div>
                   <div class="form-group">
@@ -292,6 +318,7 @@
                       placeholder="Area, City"
                       id="address2"
                       name="add2"
+                      required
                     />
                   </div>
                   <div class="form-group">
@@ -302,6 +329,7 @@
                       placeholder="State, Pincode"
                       id="address3"
                       name="add3"
+                      required
                     />
                   </div>
                   <div class="form-group last mb-3">
@@ -312,6 +340,7 @@
                       placeholder="Upload Logo"
                       id="Company Logo"
                       name="logo"
+                      
                     />
                   </div>
                   <div class="form-group last mb-3">
@@ -332,6 +361,18 @@
                       placeholder="Your Password"
                       id="password"
                       name="pass"
+                      required
+                    />
+                  </div>
+                  <div class="form-group last mb-3">
+                    <label for="password1">Verify Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Your Password"
+                      id="password1"
+                      name="pass1"
+                      required
                     />
                   </div>
 

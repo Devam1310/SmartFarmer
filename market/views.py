@@ -1,4 +1,5 @@
 from django.shortcuts import render,redirect
+from django.contrib import messages
 from .models import *
 from django.http import HttpResponse
 import requests
@@ -80,9 +81,11 @@ def login(request):
         for company_p in companies_all:
             if company_p.email==company_email and company_p.password==password:
                 flag=1
-                return redirect('home.html')
+                return redirect('/')
         if flag==0:
-            return redirect('login.html')
+            messages.add_message(request, messages.INFO, 'Hello world.')
+            print("Invalid cred")
+            return redirect('login')
     else:
         return render(request, 'login.html')
 
@@ -109,7 +112,7 @@ def signup(request):
         obj.logo=logo
         obj.certificate=certi
         obj.save()
-        return render(request,'home.html')
+        return redirect('/')
     else:
         return render(request,'signup.html')
     
@@ -151,3 +154,7 @@ def pricedata(request):
     string3="{} Commodities Added".format(len(commodities))
     string="<h1>{}</h1>".format(string1+"\n"+string2+"\n"+string3)
     return HttpResponse(string)
+
+
+def forgot(request):
+    return render(request,'forgot.html')

@@ -32,7 +32,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="{% static './assets/css/login/style.css' %}" />
 
-    <title>Login #5</title>
+    <title>Log In</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -75,8 +75,10 @@
       href="{% static './assets/css/argon-design-system.css' %}"
       rel="stylesheet"
     />
+
   </head>
   <body>
+    
     <nav
       id="navbar-main"
       class="navbar navbar-main navbar-expand-lg bg-white navbar-light position-sticky top-0 shadow py-2"
@@ -255,6 +257,7 @@
                       placeholder="your-email@gmail.com"
                       id="username"
                       name="companyemail"
+                      required
                     />
                   </div>
                   <div class="form-group last mb-3">
@@ -265,6 +268,7 @@
                       placeholder="Your Password"
                       id="password"
                       name="password"
+                      required
                     />
                   </div>
 
