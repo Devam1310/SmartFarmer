@@ -1,0 +1,5 @@
+This folder will contain model
+Model needs to be downloaded to use the Plant AI app.
+Download and keep the model in current directory i.e. media folder
+
+Download Link: https://drive.google.com/uc?export=download&id=1cuwNibekG3MK4wzeLsbtIJhn_0EEGyf-
